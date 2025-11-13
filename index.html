@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unique Landing Page</title>
+  <style>
+    /* ===== RESET & BASE ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1e1f29, #2a2d3e);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      position: fixed;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    header h1 {
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #00e5ff;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      margin-top: 120px;
+      text-align: center;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      background: linear-gradient(90deg, #00e5ff, #ff00d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 3s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00e5ff; }
+      to { text-shadow: 0 0 20px #ff00d4; }
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 30px;
+      background: linear-gradient(90deg, #00e5ff, #ff00d4);
+      border: none;
+      border-radius: 30px;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.08);
+    }
+
+    /* ===== FEATURE CARDS ===== */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin: 70px auto;
+      max-width: 1000px;
+      padding: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+      color: #00e5ff;
+    }
+
+    .card p {
+      color: #bbb;
+      line-height: 1.6;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: #999;
+      font-size: 0.9rem;
+    }
+    .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .social-buttons a {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: transform 0.2s, background 0.3s;
+  }
+
+  /* LinkedIn Button */
+  .linkedin {
+    background-color: #093349;
+  }
+
+  .linkedin:hover {
+    background-color: #0443f0;
+    transform: scale(1.05);
+  }
+
+  /* Instagram Button */
+  .instagram {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  }
+
+  .instagram:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+  }
+
+  .social-buttons img {
+    width: 22px;
+    height: 22px;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ShubhDesigns</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Projects</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Design. Code. Inspire.</h2>
+    <p>
+      Welcome to my creative space — where design meets technology.
+      I create beautiful and responsive websites with unique aesthetics.
+    </p>
+    <button id="btn" 
+     class="btn">Explore My Work</button>
+  </section>
+  <script>
+  document.getElementById("btn").addEventListener("click", function() {
+  window.location.href = "https://shubhdesigns.com/portfolio";
+    // 👆 Change "portfolio.html" to your actual page file name
+  });
+</script>
+
+  <section class="cards">
+    <div class="card">
+      <h3>🪄 Projects</h3>
+      <p>Modern and minimal designs with perfect color balance and aesthetics.</p>
+    </div>
+    <div class="card">
+      <h3>⚡ Linkedin</h3>
+      <p>Optimized websites that load lightning fast and perform smoothly.</p>
+    </div>
+    <div class="card">
+      <h3>💡 creativity</h3>
+      <p>Turning innovative concepts into beautiful digital experiences.</p>
+    </div>
+  </section>
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi, I’m Shubh — a passionate web designer & developer who loves creating interactive and aesthetic web experiences.</p>
+  </section>
+
+  
+  <!-- 🌐 Social Buttons -->
+  <div class="social-buttons">
+    <a href="https://www.linkedin.com/in/shubhekshu-singh-gaharwar" target="_blank" class="linkedin">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo">
+      LinkedIn
+    </a>
+
+    <a href="https://www.instagram.com/shubh_gaharwar_2102" target="_blank" class="instagram">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram Logo">
+      Instagram
+    </a>
+  </div>
+</div>
+
+  <footer>
+    <p>© 2025 ShubhDesigns | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(sectionId).classList.add("active");
+    }
+  </script>
+</body>
+
+  <footer>
+    © 2025 ShubhDesigns — Built with ❤️ and creativity.
+  </footer>
+</body>
+</html>
